@@ -1,0 +1,15 @@
+{
+  "name": "oms-firebase-scrypt",
+  "version": "1.0.0",
+  "description": "A service to encrypt using Firebase Scrypt",
+  "main": "index.js",
+  "repository": "https://github.com/marianocordoba/oms-firebase-scrypt",
+  "author": "Mariano Cordoba <marianocordoba039@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fastify": "^2.10.0"
+  }
+}

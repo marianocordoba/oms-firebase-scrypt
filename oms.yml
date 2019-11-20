@@ -1,0 +1,51 @@
+oms: 1
+info:
+  version: 1.0.0
+  title: Firebase Scrypt
+  description: A service to encrypt using Firebase Scrypt
+  contact:
+    name: Mariano Córdoba
+    email: marianocordoba039@gmail.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+lifecycle:
+  startup:
+    command: ["yarn", "start"]
+health:
+  http:
+    path: /health
+    port: 3000
+actions:
+  hash:
+    http:
+      path: /hash
+      method: post
+      port: 3000
+    arguments:
+      memCost:
+        type: int
+        in: requestBody
+        required: true
+      rounds:
+        type: int
+        in: requestBody
+        required: true
+      saltSeparator:
+        type: string
+        in: requestBody
+        required: true
+      signerKey:
+        type: string
+        in: requestBody
+        required: true
+      salt:
+        type: string
+        in: requestBody
+        required: true
+      password:
+        type: string
+        in: requestBody
+        required: true
+    output:
+      type: string
