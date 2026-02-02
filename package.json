@@ -10,6 +10,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "fastify": "^2.15.1"
+    "fastify": "^5.7.3"
   }
 }
